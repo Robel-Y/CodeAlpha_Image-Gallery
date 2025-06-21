@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Image Gallery</title>
+    <link rel="shortcut icon" href="image.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Image Gallery</h1>
+        <nav id="filter-buttons">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="nature">Nature</button>
+            <button class="filter-btn" data-filter="urban">Urban</button>
+            <button class="filter-btn" data-filter="people">People</button>
+        </nav>
+    </header>
+
+    <main>
+        <div class="gallery-container">
+            <!-- Images will be added here. The `data-category` is used for filtering. -->
+            <div class="gallery-item" data-category="nature">
+                <img src="https://picsum.photos/id/10/400/300" alt="A river in a valley">
+                <div class="overlay"><span>Nature</span></div>
+            </div>
+            <div class="gallery-item" data-category="urban">
+                <img src="https://picsum.photos/id/101/400/300" alt="Urban building">
+                <div class="overlay"><span>Urban</span></div>
+            </div>
+            <div class="gallery-item" data-category="people">
+                <img src="https://picsum.photos/id/1015/400/300" alt="A person with a camera">
+                <div class="overlay"><span>People</span></div>
+            </div>
+            <div class="gallery-item" data-category="nature">
+                <img src="https://picsum.photos/id/1016/400/300" alt="A mossy forest">
+                <div class="overlay"><span>Nature</span></div>
+            </div>
+            <div class="gallery-item" data-category="urban">
+                <img src="https://picsum.photos/id/102/400/300" alt="A busy city street">
+                <div class="overlay"><span>Urban</span></div>
+            </div>
+             <div class="gallery-item" data-category="people">
+                <img src="https://picsum.photos/id/1027/400/300" alt="A person walking on a beach">
+                <div class="overlay"><span>People</span></div>
+            </div>
+            <div class="gallery-item" data-category="nature">
+                <img src="https://picsum.photos/id/1028/400/300" alt="A foggy mountain">
+                <div class="overlay"><span>Nature</span></div>
+            </div>
+             <div class="gallery-item" data-category="urban">
+                <img src="https://picsum.photos/id/103/400/300" alt="Urban architecture">
+                <div class="overlay"><span>Urban</span></div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Lightbox Structure (initially hidden) -->
+    <div id="lightbox" class="lightbox">
+        <span class="close-btn">×</span>
+        <img class="lightbox-content" id="lightbox-img">
+        <a class="prev-btn">❮</a>
+        <a class="next-btn">❯</a>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
